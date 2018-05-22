@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+    <title>Hulk Mixins</title>
+    <meta name="description" content="A library of SASS Mixins for rapid development of websites">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="img/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+    <meta name="theme-color" content="#000">
+    <link rel="stylesheet" href="css/style.min.css" />
+</head>
+<body>
+    <nav class="uk-background-primary uk-light" uk-navbar>
+        <div class="uk-navbar-left">
+            <a class="uk-navbar-item uk-logo logo-litera" href="/">Hulk Mixins</a>
+            <span class="uk-label">v.1.0</span>
+        </div>
+        <div class="uk-navbar-right">
+            <div>
+                <a class="uk-button uk-button-default uk-margin-small-right" href="download/hulk-mixins.zip"><span uk-icon="icon: download"></span> Download</a>
+                <a class="uk-button uk-button-primary uk-margin-small-right" href="#"><span uk-icon="icon: github"></span> GitHub</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="uk-section uk-section-default uk-section-small uk-background-muted">
+        <div class="uk-container uk-container-expand">
+            <div uk-grid>
+             <div class="uk-width-1-4@m">
+<!--//NAVIGATION-->
+                <nav class="nav-items-active">
+                    <h4 class="uk-h3 uk-heading-bullet">Getting Started</h4>
+                    <ul class="uk-list uk-list-divider uk-link-text uk-card uk-card-small uk-card-default uk-card-body uk-box-shadow-hover-small">
+                        <li><a href="#installation">Installation</a></li>
+                        <li><a href="#file-structure">File structure of the source</a></li>
+                    </ul>
+                </nav>
+<!--//NAVIGATION END-->
+<!--//NAVIGATION-->
+                <nav class="nav-items-active">
+                    <h4 class="uk-h3 uk-heading-bullet">List Of Mixins</h4>
+                    <ul class="uk-list uk-list-divider uk-link-text uk-card uk-card-small uk-card-default uk-card-body uk-box-shadow-hover-small">
+                        <li><a href="#border-radius">Border Radius</a></li>
+                        <li><a href="#animation-transition">Animation Transition</a></li>
+                    </ul>
+                </nav>
+<!--//NAVIGATION END-->
+                <a class="uk-button uk-button-secondary uk-width-1-1" href="https://github.com/Pinchukov/start-html-uikit3-sass-gulp" target="_blank" uk-tooltip="Go!"><span uk-icon="icon: github"></span> Download Start html template on UIKit3</a>
+            </div>
+
+            <div class="uk-width-3-4@m">
+                <main>
+<!--//======================= alert =======================-->
+                    <div class="uk-alert-warning" uk-alert>
+                        <a class="uk-alert-close" uk-close></a>
+                        <h1 class="uk-h2">A library of SASS Mixins</h1>
+                        <p>Get a mixins collection from Mr. Hulk and make your websites faster!</p>
+                    </div>
+<!--//======================= alert END =======================-->
+<!--//======================= Getting Started =======================-->
+                    <h2 class="uk-h3 uk-heading-bullet uk-text-warning">Getting Started</h2>
+
+
+                     <div class="uk-card uk-card-default uk-card-body uk-margin-small uk-box-shadow-hover-small uk-overflow-hidden uk-background-default" uk-alert>
+                        <a class="uk-alert-close" uk-close></a>
+                        <h3 id="installation" class="uk-h4 uk-text-bold">Installation</h3>
+                         <ul class="uk-subnav uk-subnav-pill" uk-switcher="animation: uk-animation-slide-left-medium, uk-animation-slide-right-medium">
+                            <li><a href="#">Sass</a></li>
+                            <li><a href="#">Scss</a></li>
+                        </ul>
+
+                        <ul class="uk-switcher">
+                            <li>
+                              <p>File SASS</p>
+                              <pre class="uk-resize-vertical"><code>@import hulk-mixins/_hulk-mixins</code></pre>
+                            </li>
+                            <li>
+                              <p>File SCSS</p>
+<pre class="uk-resize-vertical"><code>@import 'hulk-mixins/_hulk-mixins';</code></pre>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                     <div class="uk-card uk-card-default uk-card-body uk-margin-small uk-box-shadow-hover-small uk-overflow-hidden uk-background-default" uk-alert>
+                        <a class="uk-alert-close" uk-close></a>
+                        <h3 id="file-structure" class="uk-h4 uk-text-bold">File structure of the source</h3>
+<p><code>/libs/hulk-mixins/</code></p>
+<p><code>/sass/main.sass</code></p>
+<p>or</p>
+<p><code>/sass/main.scss</code></p>
+<p>In the <code>main</code> file, you must connect <code>_hulk-mixins</code></p>
+                    </div>
+<!--//======================= Getting Started =======================-->
+
+                    <h2 class="uk-h3 uk-heading-bullet uk-text-warning">List Of Mixins</h2>
+
+<!--//======================= Border Radius =======================-->
+                    <div class="uk-card uk-card-default uk-card-body uk-margin-small uk-box-shadow-hover-small uk-overflow-hidden uk-background-default" uk-alert>
+                        <a class="uk-alert-close" uk-close></a>
+                        <h3 id="border-radius" class="uk-h4 uk-text-bold">Border Radius</h3>
+                        <ul class="uk-subnav uk-subnav-pill" uk-switcher="animation: uk-animation-slide-left-medium, uk-animation-slide-right-medium">
+                            <li><a href="#">Sass</a></li>
+                            <li><a href="#">Scss</a></li>
+                        </ul>
+
+                        <ul class="uk-switcher">
+                            <li>
+                              <p>Mixin:</p>
+<pre class="uk-resize-vertical"><code>=border-radius($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  -ms-border-radius: $radius
+  border-radius: $radius</code></pre>
+                            <p class="uk-h5">How to use</p>
+                            <pre class="uk-resize-vertical"><code>+border-radius(10px)</code></pre>
+                            <p>Example of use</p>
+<pre class="uk-resize-vertical"><code>.box
+  background-color: pink
+  color: green
+  +border-radius(10px)</code></pre>
+                          <p>Or</p>
+ <pre class="uk-resize-vertical"><code>.box
+  background-color: pink
+  color: green
+  +border-radius(10px 5px 0 8px)</code></pre>
+
+  <p>Result in CSS:</p>
+<pre class="uk-resize-vertical"><code>.box {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+}</code></pre>
+</li>
+
+<!--///////////////////////////////////////////////////////////////////////////////-->
+<li>
+<p>Mixin:</p>
+    <pre class="uk-resize-vertical"><code>@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+</code></pre>
+                            <p class="uk-h5">How to use</p>
+                            <pre class="uk-resize-vertical"><code>@include border-radius(10px);</code></pre>
+                            <p>Example of use</p>
+<pre class="uk-resize-vertical"><code>.box {
+  background-color: pink;
+  color: green;
+  @include border-radius(10px);
+}</code></pre>
+                          <p>Or</p>
+ <pre class="uk-resize-vertical"><code>.box {
+  background-color: pink;
+  color: green;
+  @include border-radius(10px 5px 0 8px);
+}</code></pre>
+
+<p>Result in CSS:</p>
+ <pre class="uk-resize-vertical"><code>.box {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+}</code></pre>
+                      </li>
+                  </ul>
+              </div>
+<!--//======================= Border Radius END =======================-->
+
+
+
+<!--//======================= Border Radius =======================-->
+                    <div class="uk-card uk-card-default uk-card-body uk-margin-small uk-box-shadow-hover-small uk-overflow-hidden uk-background-default" uk-alert>
+                        <a class="uk-alert-close" uk-close></a>
+                        <h3 id="animation-transition" class="uk-h4 uk-text-bold">Animation Transition</h3>
+                        <ul class="uk-subnav uk-subnav-pill" uk-switcher="animation: uk-animation-slide-left-medium, uk-animation-slide-right-medium">
+                            <li><a href="#">Sass</a></li>
+                            <li><a href="#">Scss</a></li>
+                        </ul>
+
+                        <ul class="uk-switcher">
+                            <li>
+                              <p>Mixin:</p>
+<pre class="uk-resize-vertical"><code>=animation-trans($s)
+  -webkit-transition: all $s ease-out
+  -moz-transition: all $s ease-out
+  -ms-transition: all $s ease-out
+  -o-transition: all $s ease-out
+  transition: all $s ease-out</code></pre>
+                            <p class="uk-h5">How to use</p>
+                            <pre class="uk-resize-vertical"><code>+animation-trans(0.8)</code></pre>
+                            <p>Example of use</p>
+<pre class="uk-resize-vertical"><code>.box
+  background-color: pink
+  color: green
+  +animation-trans(0.8)</code></pre>
+  <p>Result in CSS:</p>
+<pre class="uk-resize-vertical"><code>.box {
+  -webkit-transition: all 0.8s ease-out
+  -moz-transition: all 0.8s ease-out
+  -ms-transition: all 0.8s ease-out
+  -o-transition: all 0.8s ease-out
+  transition: all 0.8s ease-out
+}</code></pre>
+</li>
+
+<!--///////////////////////////////////////////////////////////////////////////////-->
+<li>
+<p>Mixin:</p>
+    <pre class="uk-resize-vertical"><code>@mixin animation-trans($s) {
+  -webkit-transition: all $s ease-out
+     -moz-transition: all $s ease-out
+      -ms-transition: all $s ease-out
+       -o-transition: all $s ease-out
+          transition: all $s ease-out
+}</code></pre>
+                            <p class="uk-h5">How to use</p>
+                            <pre class="uk-resize-vertical"><code>@include webkit-transition(0.8);</code></pre>
+                            <p>Example of use</p>
+<pre class="uk-resize-vertical"><code>.box {
+  background-color: pink;
+  color: green;
+  @include transition(0.8);
+}</code></pre>
+   
+<p>Result in CSS:</p>
+ <pre class="uk-resize-vertical"><code>.box {
+  -webkit-transition: all 0.8s ease-out
+  -moz-transition: all 0.8s ease-out
+  -ms-transition: all 0.8s ease-out
+  -o-transition: all 0.8s ease-out
+  transition: all 0.8s ease-out
+}</code></pre>
+                      </li>
+                  </ul>
+              </div>
+<!--//======================= Border Radius END =======================-->
+
+
+
+        </main>
+    </div><!--//uk-width-3-4@m-->
+</div><!--//uk-grid-->
+</div><!--//uk-container-->
+</section>
+
+<footer class="uk-footer uk-background-secondary">
+    <div class="uk-container uk-padding-small">
+        <div class="uk-grid-match uk-child-width-1-1 pin-text-white uk-text-center" uk-grid>
+            <div>
+                <p class="uk-margin-remove logo-litera uk-light">Hulk Mixins &copy; 2018</p>
+            </div>
+        </div><!--//uk-grid-->
+    </div><!--//uk-container-->
+</footer>
+<!--Scroll Top-->
+<a id="js-scroll-trigger" class="uk-position-fixed uk-position-small uk-position-bottom-right uk-button uk-button-default uk-button-small uk-padding-remove-horizontal" uk-icon="icon: chevron-up; ratio: 1.5" href="#target" uk-scroll></a>
+<!--//Scroll Top-->
+
+<script src="js/scripts.min.js"></script>
+</body>
+</html>
